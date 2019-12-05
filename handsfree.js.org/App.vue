@@ -58,6 +58,7 @@ export default {
 
   mounted() {
     // Setup handsfree
+    window.Handsfree.libSrc = '/'
     this.$store.commit('set', [
       'handsfree',
       new window.Handsfree({

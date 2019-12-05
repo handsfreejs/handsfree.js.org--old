@@ -70,7 +70,6 @@ export default {
 
   methods: {
     onAframeReady() {
-      console.log('ready')
       this.$emit('aframeReady')
     }
   }
