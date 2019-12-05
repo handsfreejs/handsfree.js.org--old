@@ -12,8 +12,8 @@
     //- Text
     a-entity(position="-3.75 -1 -6" rotation="5 0 0")
       a-entity(rotation="0 0 5" position="0 2 0.2" text-geometry="value: Presenting; font: #dawningFont; bevelEnabled: true; bevelSize: 0.025; bevelThickness: 0.025; curveSegments: 12; size: .5; height: 0;" material="color:lavenderblush; metalness:1; roughness: 0; sphericalEnvMap: #pink;")
-    a-entity(position="-3.5 0 -6" text-geometry="value: Handsfree.js; font: #exoItalicFont; style: italic; size: 0.8; weight: bold; height: 0;" material="shader: flat; color: white")
-    a-entity(position="-3.5 0 -6" text-geometry="value: Handsfree.js; font: #exoItalicFont; style: italic; size: 0.8; weight: bold; height: 0; bevelEnabled: true; bevelSize: 0.04; bevelThickness: 0.04; curveSegments: 1" material="shader: flat; color: white; transparent: true; opacity: 0.4")
+    a-entity(position="-3.5 0 -6" text-geometry="value: Handsfree.js; font: #exoItalicFont; style: italic; size: 0.7; weight: bold; height: 0;" material="shader: flat; color: white")
+    a-entity(position="-3.5 0 -6" text-geometry="value: Handsfree.js; font: #exoItalicFont; style: italic; size: 0.7; weight: bold; height: 0; bevelEnabled: true; bevelSize: 0.04; bevelThickness: 0.04; curveSegments: 1" material="shader: flat; color: white; transparent: true; opacity: 0.4")
 
     //- Floor
     a-entity(ref="floor" geometry="primitive: plane; width: 10000; height: 10000;" rotation="-90 0 0" material="src: #grid; repeat: 10000 10000; transparent: true;metalness:0.6; roughness: 0.4; sphericalEnvMap: #sky;")
