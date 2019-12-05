@@ -19,10 +19,10 @@
             v-list-item-action
               v-icon mdi-face-recognition
             v-list-item-content Emojify
-          v-list-item(:to='{name: "1stPerson"}')
-            v-list-item-action
-              v-icon mdi-google-street-view
-            v-list-item-content 1st Person View
+          //- v-list-item(:to='{name: "1stPerson"}')
+          //-   v-list-item-action
+          //-     v-icon mdi-google-street-view
+          //-   v-list-item-content 1st Person View
           v-list-item(:to='{name: "FacePaint"}')
             v-list-item-action
               v-icon mdi-brush
