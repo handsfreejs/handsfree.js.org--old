@@ -13,7 +13,7 @@ const domainName = pkg.deploy.domain
 const shell = require('shelljs')
 
 // navigate into the build output directory
-shell.cd('dist/handsfree.js.org')
+shell.cd('dist/src')
 
 // if you are deploying to a custom domain
 shell.exec(`echo ${domainName} > CNAME`)

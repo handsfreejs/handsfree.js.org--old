@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  outputDir: 'dist/handsfree.js.org',
+  outputDir: 'dist/src',
   transpileDependencies: ['vuetify'],
 
   css: {
@@ -17,8 +17,8 @@ module.exports = {
     config
       .entry('app')
       .clear()
-      .add('./handsfree.js.org/main.js')
+      .add('./src/main.js')
       .end()
-    config.resolve.alias.set('@', path.join(__dirname, './handsfree.js.org'))
+    config.resolve.alias.set('@', path.join(__dirname, './src'))
   }
 }
