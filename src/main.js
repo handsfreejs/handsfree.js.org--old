@@ -3,13 +3,13 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
+// @FIXME Vue should use handsfree
+import 'handsfree'
+// @FIXME this should be imported by handsfree
+import 'handsfree/handsfree/handsfree.sass'
 import 'roboto-fontface/css/roboto/roboto-fontface.css'
 import '@mdi/font/css/materialdesignicons.css'
-import '../handsfree.js/handsfree.js'
 import '@/assets/sass/main.sass'
-
-// We set this to the root because our models are in the public folder
-window.Handsfree.libSrc = '/'
 
 // Highlight.js
 // @TODO only load on required pages

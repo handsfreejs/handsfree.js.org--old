@@ -2,10 +2,10 @@
   <p>~ Presenting ~</p>
   <p>with support from the <a href="https://www.cmu.edu/cfa/studio/index.html">Studio for Creative Inquiry at CMU</a>, <a href="https://glitch.com/@handsfreejs">Glitch.com</a>, the <a href="https://youtu.be/CJDpF4xUieY?t=58">School of AI</a> and you!</p>
   <br>
-  <p><img src="https://media.giphy.com/media/3Z15Ve7WEQGkLa1FwC/giphy.gif" alt="handsfree.js"></p>
+  <p><img src="https://i.imgur.com/i0f4HyA.gif" alt="handsfree.js"></p>
   <br>
-  <h1>Handsfree.js</h1>
-  <p>A wrapper library around web-based computer vision models for the purpose of interacting with the web handsfree</p>
+  <h1><a href="https://handsfree.js.org">Handsfree.js.org</a></h1>
+  <p>The site for our wrapper library around web-based computer vision models for the purpose of interacting with the web handsfree</p>
   <p>
     <img class="mr-1" src="https://img.shields.io/github/release-pre/handsfreejs/handsfree.svg"> <img class="mr-1" src="https://img.shields.io/github/last-commit/handsfreejs/handsfree.svg">
     <img src="https://img.shields.io/github/repo-size/handsfreejs/handsfree.svg">
@@ -21,90 +21,15 @@
 <br>
 <br>
 
-# Quickstart
-
-For more examples, see the `/examples/` folder:
-
-```html
-<!DOCTYPE html>
-<head>
-  <!-- Require dependencies, which adds Handsfree to global namespace -->
-  <!-- prettier-ignore -->
-  <link rel="stylesheet" href="https://unpkg.com/handsfree@6.0.5/dist/handsfreejs/handsfree.css" />
-  <script src="https://unpkg.com/handsfree@6.0.5/dist/handsfreejs/handsfree.js"></script>
-</head>
-<body>
-  <button onclick="handsfree.start()">Start Webcam</button>
-
-  <script>
-    // Create a new instance. Use one instance for each camera
-    const handsfree = new Handsfree({})
-
-    // Create a simple plugin that displays pointer values on every frame
-    Handsfree.use('consoleLogger', ({ head }) => {
-      console.log(`---
-      Pitch ${(head.rotation[0] * 180) / Math.PI}
-      Yaw ${(head.rotation[1] * 180) / Math.PI}
-      Roll ${(head.rotation[1] * 180) / Math.PI}`)
-    })
-  </script>
-</body>
-```
-
-<br>
-<br>
-<br>
-
-<div align="center">
-  <img src="https://i.imgur.com/qkYyazG.gif" width=250>
-  <h1>Learn how to use Handsfree.js</h1>
-  <a href="https://github.com/handsfreejs/handsfree/wiki/Config">Config</a> &middot; <a href="https://github.com/handsfreejs/handsfree/wiki/Methods">Methods</a> &middot; <a href="https://github.com/handsfreejs/handsfree/wiki/Properties">Properties</a> &middot; <a href="https://github.com/handsfreejs/handsfree/wiki/Head">The Head</a> &middot; <a href="https://github.com/handsfreejs/handsfree/wiki/Plugins">Plugins</a> &middot; <a href="https://github.com/handsfreejs/handsfree/wiki/Events">Events</a> &middot; <a href="https://github.com/handsfreejs/handsfree/wiki/Classes">Classes</a>
-
-  <h1>Tutorials</h1>
-</div>
-
-- [Getting Started](https://dev.to/heyozramos/handsfree-js-a-web-based-face-pointer-24m1): Learn how to setup Handsfree.js and access the `handsfree.pointer` properties
-- [Controlling a YouTube 360 video](https://dev.to/heyozramos/controlling-youtube-360-videos-handsfree-2801): Learn how to access and use `handsfree.head.rotation` to control a 360 video
-- [Puppeteering Emojis with face morphs](https://dev.to/heyozramos/puppeteering-emojis-with-face-morphs-with-handsfree-js-55kp): Explores the face morph activation properties
-- [Face Painting with P5.js](https://dev.to/heyozramos/face-painting-with-p5-js-2b64): Integrate with P5.js to paint with your face
-
----
-
-> The rest of this document is for running Handsfree.js.org and the Handsfree.js library locally.
+> # About this Repo
 >
-> **👆 See the above wiki links for how to actually use Handsfree.js in your own app 👆**
-
----
+> This repo represents our site, [handsfree.js.org](https://handsfree.js.org). If you're looking for the library, it's located at [https://github.com/handsfreejs/handsfree](https://github.com/handsfreejs/handsfree)
 
 <br>
 <br>
 <br>
 
-# Local Handsfree.js Development
-
-> Note: These are temporary instructions and will be updated over the next few days as we move everything in `handsfree.js.org` into a separate repo!
-
-To work on just the Handsfree.js file, located in `/handsfree.js/`, do the following:
-
-- Install [Parcel](https://parceljs.org/) on your system globally with: `yarn global add parcel-bundler`
-- Run `yarn library` from the project root
-- This will open `/handsfree.js/index.html` on `localhost:1234`
-- The file entry point is `/handsfree.js/handsfree.js`
-- Run `yarn bundle` to bundle the library into `/dist/handsfree.js`
-
-<br>
-<br>
-<br>
-
-# Handsfree.js.org Development
-
-> ## A note about this codebase
->
-> This codebase is currently broken into two parts:
->
-> - The library itself, located in `/handsfree.js/`
-> - The demos (Handsfree.js.org), located in `/handsfree.js.org/`
-> - Ready to go examples with no server requirements, located in `/examples/`
+# Local Development
 
 To run this project locally you'll need [NodeJS](https://nodejs.org/en/download/) and the [Yarn package manager](https://yarnpkg.com/en/docs/install#windows-stable).
 
@@ -124,35 +49,25 @@ yarn deploy
 yarn bundle
 ```
 
-Assuming you haven't downloaded this repository yet, the following are the steps you should do in oder:
+Assuming you haven't downloaded this repository yet, the following are the steps you should do in order:
 
-1. Download this repository: `git clone https://github.com/handsfreejs/handsfree.git`
-2. Install dependencies: `cd handsfree && yarn`
+1. Download this repository: `git clone https://github.com/handsfreejs/handsfree.js.org.git`
+2. Install dependencies: `cd handsfree.js.org && yarn`
 3. Run the development server: `yarn start`
 
 If you don't have git, you can also just [download and unzip our latest archive](https://github.com/handsfreejs/handsfree/archive/master.zip). You'll still need to install dependencies by running `yarn` in the unzipped directory.
-
-## Building the handsfree.js library
-
-When you run `yarn start`, `yarn build`, or `yarn deploy` what you're actually doing is running or building the development environment. To create a single `handsfree.js` script (with accompanying models) for use within your own projects, do the following:
-
-- Install [Parcel](https://parceljs.org/) on your system globally with: `yarn global add parcel-bundler`
-- Run `yarn bundle`
-- The files will be built into `/dist/handsfree/`
-
-The resulting directory structure should remain intact. If you'd like to host the `models` folder separate from the `handsfree.js` file, then set `Handsfree.libSrc` to its parent path. In other words if you're serving the models out of `example.com/path/to/models` then `Handsfree.libSrc = "/path/to"`.
 
 ## Deploy Script
 
 Running `yarn deploy` will commit everything inside of `/dist/demos` to the `gh-pages` branch of the repository set in `package.json > deploy.repo` using the `package.json > deploy.url` custom domain. This lets you quickly deploy this repository to GitHub Pages!
 
+<br>
+<br>
+<br>
+
 # License & Attributions
 
-Handsfree.js is available for free and commercial use under [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
-
-## Models
-
-- [Jeeliz Weboji](https://github.com/jeeliz/jeelizWeboji) (Apache License 2.0) - Face and head pose estimation
+This repo is available for free and commercial use under [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
 
 ## Art
 
