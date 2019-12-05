@@ -147,7 +147,8 @@ export default {
   computed: mapState(['isTracking']),
 
   data: () => ({
-    isAframeReady: false
+    isAframeReady: false,
+    anime: null
   }),
 
   watch: {
@@ -163,12 +164,16 @@ export default {
     ])
 
     const ctx = this.$refs.canvas.getContext('2d')
-    anime({
+    this.anime = anime({
       duration: Infinity,
       update: () => {
         ctx.clearRect(0, 0, this.$refs.canvas.width, this.$refs.canvas.height)
       }
     })
+  },
+
+  beforeDestroy() {
+    this.anime.pause()
   },
 
   methods: {
