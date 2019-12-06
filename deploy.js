@@ -20,7 +20,7 @@ shell.exec(`echo ${domainName} > CNAME`)
 
 shell.exec('git init')
 shell.exec('git add -A')
-shell.exec(`git commit -m "deploy docs for ${pkg.version}"`)
+shell.exec(`git commit -m "deploy handsfree.js.org"`)
 
 // if you are deploying to https://<USERNAME>.github.io
 // git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
