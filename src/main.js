@@ -3,10 +3,10 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
-// @FIXME Vue should use handsfree
-import 'handsfree'
+// @FIXME We should be using the actual module but this is fine until Handsfree.js is updated
+import 'handsfree/dist/handsfree.js'
 // @FIXME this should be imported by handsfree
-import 'handsfree/handsfree/handsfree.sass'
+import 'handsfree/dist/handsfree.css'
 import 'roboto-fontface/css/roboto/roboto-fontface.css'
 import '@mdi/font/css/materialdesignicons.css'
 import '@/assets/sass/main.sass'

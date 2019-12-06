@@ -1,3 +1,13 @@
 .handsfree-debugger
-  position: fixed
-  bottom: 0
+  position: relative
+
+  > canvas
+    width: 100%
+
+// Handsfree todos
+// @TODO include these in handsfree.js
+.handsfree-hide-show-when-stopped
+  display: none
+
+  .handsfree-started &
+    display: block
