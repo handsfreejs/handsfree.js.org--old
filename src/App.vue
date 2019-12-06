@@ -31,9 +31,18 @@
             v-list-item-action
               v-icon mdi-keyboard
             v-list-item-content Virtual Keyboard
+            
         v-spacer
-        div(ref='debuggerTarget')
-
+        div(:class='{hidden: !isFeedVisible}')
+          div(ref='debuggerTarget')
+        v-list.handsfree-hide-show-when-stopped(dense)
+          v-list-item
+            v-list-item-content(@click='isFeedVisible = !isFeedVisible')
+              v-btn(block)
+                v-icon mdi-webcam
+                span.ml-2(v-if='isFeedVisible') Hide debug feed
+                span.ml-2(v-else) Show debug feed
+          
     v-app-bar(app)
       v-app-bar-nav-icon.mr-3.d-print-none(@click.stop="sidebar.main = !sidebar.main")
       div.d-flex.align-center
@@ -55,6 +64,10 @@ export default {
   components: { TensorMonkey },
 
   computed: mapState(['isTracking', 'sidebar']),
+
+  data: () => ({
+    isFeedVisible: false
+  }),
 
   mounted() {
     // Setup handsfree
