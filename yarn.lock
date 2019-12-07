@@ -4820,9 +4820,9 @@ handlebars@^4.1.2:
     uglify-js "^3.1.4"
 
 handsfree@^6.0.5:
-  version "6.0.6"
-  resolved "https://registry.yarnpkg.com/handsfree/-/handsfree-6.0.6.tgz#52a63b2be24cb6cbb0cf6dc0f1d343a22a419d06"
-  integrity sha512-nCSsQB5LvlKN0r9ZlVo9u3VO7OMsmI3SKNjG7RK9RlXI9SJOvaF2czfT8fKSkQwKtAUZgSEs4K+XZDWBrw4voA==
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/handsfree/-/handsfree-6.1.0.tgz#6736dfb345eebe8f59d59fe9ebe1f6c4c740cdb5"
+  integrity sha512-IhWdFOa6cso+dyTAFErdheRYSYEK759ce59+8jSrLlG/Fr05lk1aGG37SYneGImIQWGqgqDJUehengE/am8Dig==
   dependencies:
     gsap "^2.1.3"
     lodash "^4.17.15"
