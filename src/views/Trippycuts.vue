@@ -27,21 +27,24 @@ export default {
     handsfree.reload()
 
     // Create a plugin to handle our trippycuts
-    const ctx = this.$refs.sceneMain.getContext('2d')
-    const component = this
+    const $scene = this.$refs.sceneMain
+    // const ctx = this.$refs.sceneMain.getContext('2d')
     window.Handsfree.use('body.trippycuts', {
       onUse(context) {
-        component.$refs.sceneMain.width = context.debugger.video.width
-        component.$refs.sceneMain.height = context.debugger.video.height
+        $scene.width = context.debugger.video.width
+        $scene.height = context.debugger.video.height
       },
 
-      onFrame(context) {
-        ctx.drawImage(
-          context.debugger.video,
+      onFrame({ body, model }) {
+        if (!body.segmentation.length) return
+
+        model.bodypix.sdk.drawMask(
+          $scene,
+          handsfree.debugger.video,
+          model.bodypix.sdk.toMask(body.segmentation),
+          1,
           0,
-          0,
-          context.debugger.video.width,
-          context.debugger.video.height
+          0
         )
       }
     })
