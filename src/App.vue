@@ -31,13 +31,21 @@
             v-list-item-action
               v-icon mdi-keyboard
             v-list-item-content Virtual Keyboard
+          //- v-list-item(:to='{name: "Desktop"}')
+          //-   v-list-item-action
+          //-     v-icon mdi-laptop
+          //-   v-list-item-content Desktop Control
+          v-list-item(:to='{name: "Trippycuts"}')
+            v-list-item-action
+              v-icon mdi-group
+            v-list-item-content Trippycuts
             
         v-spacer
         div(:class='{hidden: !isFeedVisible}')
           div(ref='debuggerTarget')
         v-list.handsfree-hide-show-when-stopped(dense)
           v-list-item
-            v-list-item-content(@click='isFeedVisible = !isFeedVisible')
+            v-list-item-content(@click='toggleDebugger')
               v-btn(block)
                 v-icon mdi-webcam
                 span.ml-2(v-if='isFeedVisible') Hide debug feed
@@ -100,6 +108,19 @@ export default {
 
     stopWebcam() {
       this.$store.dispatch('stopTracking')
+    },
+
+    /**
+     * Toggles the debugger
+     */
+    toggleDebugger() {
+      if (this.isFeedVisible) {
+        this.isFeedVisible = false
+        window.handsfree.hideDebugger()
+      } else {
+        this.isFeedVisible = true
+        window.handsfree.showDebugger()
+      }
     }
   }
 }

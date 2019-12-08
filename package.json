@@ -1,11 +1,10 @@
 {
   "name": "handsfree",
-  "version": "6.0.5",
+  "version": "1.0.0",
   "deploy": {
     "domain": "handsfree.js.org",
     "repo": "https://github.com/handsfreejs/handsfree"
   },
-  "main": "dist/handsfree.js/handsfree.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
