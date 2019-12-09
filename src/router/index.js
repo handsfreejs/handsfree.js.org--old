@@ -53,12 +53,6 @@ const routes = [
     name: 'Desktop',
     component: () =>
       import(/* webpackChunkName: "Desktop" */ '../views/Desktop.vue')
-  },
-  {
-    path: '/trippycuts',
-    name: 'Trippycuts',
-    component: () =>
-      import(/* webpackChunkName: "Trippycuts" */ '../views/Trippycuts.vue')
   }
 ]
 

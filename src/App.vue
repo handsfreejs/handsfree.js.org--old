@@ -35,10 +35,6 @@
           //-   v-list-item-action
           //-     v-icon mdi-laptop
           //-   v-list-item-content Desktop Control
-          //- v-list-item(:to='{name: "Trippycuts"}')
-          //-   v-list-item-action
-          //-     v-icon mdi-group
-          //-   v-list-item-content Trippycuts
             
         v-spacer
         div(:class='{hidden: !isFeedVisible}')
