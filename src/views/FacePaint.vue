@@ -22,6 +22,7 @@
 export default {
   data: () => ({
     offsetLeft: 0,
+    isP5Ready: false,
     p5: {}
   }),
 
@@ -55,6 +56,7 @@ export default {
               )
               canvas.parent(this.$refs.canvas)
               p.strokeWeight(6)
+              this.isP5Ready = true
             }
 
             this.setupHandsfree()
@@ -73,7 +75,7 @@ export default {
       let lastY = 0
 
       window.Handsfree.use('p5.facePaint', ({ head }) => {
-        if (!this.p5) return
+        if (!this.p5 || !this.isP5Ready) return
 
         lastX = x
         lastY = y

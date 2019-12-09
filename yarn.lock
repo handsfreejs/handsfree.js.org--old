@@ -4819,13 +4819,14 @@ handlebars@^4.1.2:
   optionalDependencies:
     uglify-js "^3.1.4"
 
-handsfree@^6.0.5:
-  version "6.0.6"
-  resolved "https://registry.yarnpkg.com/handsfree/-/handsfree-6.0.6.tgz#52a63b2be24cb6cbb0cf6dc0f1d343a22a419d06"
-  integrity sha512-nCSsQB5LvlKN0r9ZlVo9u3VO7OMsmI3SKNjG7RK9RlXI9SJOvaF2czfT8fKSkQwKtAUZgSEs4K+XZDWBrw4voA==
+handsfree@^6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/handsfree/-/handsfree-6.1.1.tgz#172d20e7dbf4068f4da78faaa017d5b3d33b5283"
+  integrity sha512-QvOH9VGts4wTzXJKmDg0KtMn0oqqsF8UgE/dwJRZ/y6cOREAeiQevHwHGtETjQhUbDzUeQPBMER2V8jy7m6Igg==
   dependencies:
     gsap "^2.1.3"
     lodash "^4.17.15"
+    normalize.css "^8.0.1"
 
 har-schema@^2.0.0:
   version "2.0.0"
@@ -7182,6 +7183,11 @@ normalize-url@^3.0.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-3.3.0.tgz#b2e1c4dc4f7c6d57743df733a4f5978d18650559"
   integrity sha512-U+JJi7duF1o+u2pynbp2zXDW2/PADgC30f0GsHZtRh+HOcXHnw137TrNlyxxRvWW5fjKd3bcLHPxofWuCjaeZg==
+
+normalize.css@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.1.tgz#9b98a208738b9cc2634caacbc42d131c97487bf3"
+  integrity sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==
 
 npm-bundled@^1.0.1:
   version "1.0.6"
