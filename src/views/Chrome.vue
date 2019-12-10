@@ -3,7 +3,10 @@ v-container
   v-layout
     v-row
       v-col.col-12.col-md-6
-        AframeHero(v-on:aframeReady='onAframeReady')
+        AframeHero(v-on:aframeReady='onAframeReady' :content=`{
+          pretitle: {text: 'Presenting', position: '-4 -1 -8'},
+          title: {text: 'Handsfree Chrome', position: '-4.5 0 -9'}
+        }`)
         div.text-center(style='position: reative; z-index: 3')
           h1.display-2.font-weight-bold.mb-5(:class="{invisible: isAframeReady}") Handsfree Chrome
         

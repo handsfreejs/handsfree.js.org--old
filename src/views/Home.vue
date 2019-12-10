@@ -3,7 +3,10 @@
     v-layout(text-center wrap)
       v-row
         v-col(cols=12 md=6).mb-4
-          AframeHero(v-on:aframeReady='onAframeReady')
+          AframeHero(v-on:aframeReady='onAframeReady' :content=`{
+            pretitle: {text: 'Presenting', position: '-3.75 -1 -8'},
+            title: {text: 'Handsfree.js', position: '-3.5 0 -7'}
+          }`)
 
           div(style="position: relative; z-index: 3")
             h1.display-2.font-weight-bold.mb-5(@click='startFireworks' :class="{invisible: isAframeReady}") Handsfree.js
