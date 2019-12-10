@@ -38,11 +38,11 @@
 
         v-spacer
 
-        v-list
-          v-list-item.primary(:to='{name: "Chrome"}')
-            v-list-item-action
-              v-icon mdi-google
-            v-list-item-content Chrome Extension
+        //- v-list
+        //-   v-list-item.primary(:to='{name: "Chrome"}')
+        //-     v-list-item-action
+        //-       v-icon mdi-google
+        //-     v-list-item-content Chrome Extension
 
         v-list
         div(:class='{hidden: !isFeedVisible}')
