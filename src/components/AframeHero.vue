@@ -35,14 +35,27 @@ import { TweenMax } from 'gsap/all'
 let rotation = { x: 0, y: 0, z: 0 }
 
 export default {
+  data: () => ({
+    shouldReloop: true,
+    floorSpeed: 0.01
+  }),
+
   mounted() {
     let component = this
+
+    /**
+     * Loop background
+     */
+    // Animate the floor moving
+    this.animateFloor(true)
 
     /**
      * "Look around" the aframe
      */
     window.Handsfree.use('aframe.hero', {
       onFrame({ head }) {
+        component.floorSpeed = 0.1
+
         TweenMax.to(rotation, 500 / 1000, {
           x: -head.rotation[0] + 0.20944,
           y: -head.rotation[1],
@@ -52,11 +65,6 @@ export default {
         component.$refs.camera.object3D.rotation.x = rotation.x
         component.$refs.camera.object3D.rotation.y = rotation.y
         component.$refs.camera.object3D.rotation.z = rotation.z
-
-        // Animate the floor moving
-        component.$refs.floor.object3D.position.z -= 0.1
-        if (component.$refs.floor.object3D.position.z < -100)
-          component.$refs.floor.object3D.position.z = 0
       }
     })
 
@@ -65,12 +73,27 @@ export default {
 
   beforeDestroy() {
     window.Handsfree.disable('aframe.hero')
+    this.shouldReloop = false
     this.$refs.aframe.removeEventListener('loaded', this.onAframeReady)
   },
 
   methods: {
     onAframeReady() {
       this.$emit('aframeReady')
+    },
+
+    /**
+     * Scrolls the floor away from user
+     */
+    animateFloor(shouldReloop) {
+      console.log('ANIMATE')
+      this.$refs.floor.object3D.position.z -= this.floorSpeed
+      if (this.$refs.floor.object3D.position.z < -100)
+        this.$refs.floor.object3D.position.z = 0
+
+      if (shouldReloop) {
+        requestAnimationFrame(() => this.animateFloor(true))
+      }
     }
   }
 }

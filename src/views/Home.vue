@@ -7,7 +7,7 @@
             div#aframe-scene-wrap(:class='{invisible: !isAframeReady}')
               AframeHero(v-on:aframeReady='onAframeReady')
             canvas#tensormonkey-fireworks(ref='canvas' width=500 height=500)
-            TensorMonkey(height='150px' perspective='400px')
+            TensorMonkey.ozramos-tensormonkey-animated-slowly(height='150px' perspective='400px')
 
           div(style="position: relative; z-index: 3")
             h1.display-2.font-weight-bold.mb-5(@click='startFireworks' :class="{invisible: isAframeReady}") Handsfree.js
