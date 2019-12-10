@@ -35,8 +35,16 @@
           //-   v-list-item-action
           //-     v-icon mdi-laptop
           //-   v-list-item-content Desktop Control
-            
+
         v-spacer
+
+        v-list
+          v-list-item.primary(:to='{name: "Chrome"}')
+            v-list-item-action
+              v-icon mdi-google
+            v-list-item-content Chrome Extension
+
+        v-list
         div(:class='{hidden: !isFeedVisible}')
           div(ref='debuggerTarget')
         v-list.handsfree-hide-show-when-stopped(dense)

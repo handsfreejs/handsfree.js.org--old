@@ -118,6 +118,13 @@
               ul.mb-5
                 li Explore how to use Handsfree.js with just the core plugins
               <blockquote class="twitter-tweet"><p lang="en" dir="ltr">What if you couldn&#39;t speak or type? In this demo I explore typing through a face pointer and virtual keyboard!<br><br>Demo: <a href="https://t.co/iM5YrLDg3u">https://t.co/iM5YrLDg3u</a><br><br>Day 1 of <a href="https://twitter.com/hashtag/100DaysofCode?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysofCode</a>. I restarted because I took few weeks days off 😅: <a href="https://t.co/hPaVC1KRWC">https://t.co/hPaVC1KRWC</a> <a href="https://t.co/fMwkcA40QH">pic.twitter.com/fMwkcA40QH</a></p>&mdash; Oz Ramos (@HeyOzRamos) <a href="https://twitter.com/HeyOzRamos/status/1201001984209195009?ref_src=twsrc%5Etfw">December 1, 2019</a></blockquote>
+        v-col.col-12.col-md-6.col-lg-4
+          v-card
+            v-card-title Freez Frame
+            v-card-text
+              ul.mb-5
+                li An experimental effect that uses BodyPix to freeze copies of yourself
+              <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Started a glitch effect inspired by <a href="https://twitter.com/zachlieberman?ref_src=twsrc%5Etfw">@zachlieberman</a><br><br>Demo: <a href="https://t.co/DhweuJdMlY">https://t.co/DhweuJdMlY</a><br>Source: <a href="https://t.co/l6B6yKNudE">https://t.co/l6B6yKNudE</a><br><br>Day 9 of <a href="https://twitter.com/hashtag/100DaysofMLCode?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysofMLCode</a> and <a href="https://twitter.com/hashtag/100DaysofCode?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysofCode</a> <a href="https://t.co/rwVFY27eaV">pic.twitter.com/rwVFY27eaV</a></p>&mdash; Oz Ramos (@HeyOzRamos) <a href="https://twitter.com/HeyOzRamos/status/1203837800228904961?ref_src=twsrc%5Etfw">December 9, 2019</a></blockquote>
 
     v-layout
       v-row.my-spread
