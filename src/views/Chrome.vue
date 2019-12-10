@@ -12,7 +12,7 @@ v-container
         
       v-col.col-12.col-md-6
         v-card
-          v-card-title Handsfree Chrome Extension 
+          v-card-title The Handsfree Chrome Extension 
           v-card-text.body-1
             p Browse the web, watch videos, play games, do work, use social media, and more handsfree 👋
             p Those are the goals anyways, the Chrome Extension is in the works! <strong>Sign up below to get notified of its release</strong>, <a href="https://github.com/handsfreejs/handsfree-chrome">star it on GitHub</a>, and <a href="https://twitter.com/heyozramos">follow me on Twitter @heyozramos</a>

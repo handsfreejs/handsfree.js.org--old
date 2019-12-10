@@ -9,7 +9,7 @@
           }`)
 
           div(style="position: relative; z-index: 3")
-            h1.display-2.font-weight-bold.mb-5(@click='startFireworks' :class="{invisible: isAframeReady}") Handsfree.js
+            h1.display-2.font-weight-bold.mb-5(:class="{invisible: isAframeReady}") Handsfree.js
             p
               <a href="https://github.com/handsfreejs/handsfree" class="mr-3"><img class="mr-1" src="https://img.shields.io/github/release-pre/handsfreejs/handsfree.svg"></a>
               <a href="https://github.com/handsfreejs/handsfree" class="mr-3"><img class="mr-1" src="https://img.shields.io/github/last-commit/handsfreejs/handsfree.svg"></a>
@@ -144,7 +144,6 @@
 <script>
 import AframeHero from '@/components/AframeHero'
 import { mapState } from 'vuex'
-import anime from 'animejs/lib/anime.es.js'
 
 export default {
   components: { AframeHero },
@@ -152,33 +151,14 @@ export default {
   computed: mapState(['isTracking']),
 
   data: () => ({
-    isAframeReady: false,
-    anime: null
+    isAframeReady: false
   }),
-
-  watch: {
-    isTracking() {
-      this.startFireworks()
-    }
-  },
 
   mounted() {
     this.$store.dispatch('syntaxHighlight')
     this.$store.dispatch('loadScripts', [
       'https://platform.twitter.com/widgets.js'
     ])
-
-    const ctx = this.$refs.canvas.getContext('2d')
-    this.anime = anime({
-      duration: Infinity,
-      update: () => {
-        ctx.clearRect(0, 0, this.$refs.canvas.width, this.$refs.canvas.height)
-      }
-    })
-  },
-
-  beforeDestroy() {
-    this.anime.pause()
   },
 
   methods: {
@@ -196,157 +176,7 @@ export default {
       setTimeout(() => {
         this.isAframeReady = true
       }, 1000)
-    },
-
-    /**
-     * Shoots fireworks
-     */
-    startFireworks() {
-      const ctx = this.$refs.canvas.getContext('2d')
-
-      this.animateFireworks(250, 250, ctx)
-      anime({ duration: 250 }).finished.then()
-    },
-
-    /**
-     * Animate fireworks
-     */
-    animateFireworks(x, y, ctx) {
-      var circle = this.createCircle(x, y, ctx)
-      var particules = []
-      for (var i = 0; i < 250; i++) {
-        particules.push(this.createParticle(x, y, ctx))
-      }
-      anime
-        .timeline()
-        .add(
-          {
-            targets: particules,
-            x: function(p) {
-              return p.endPos.x
-            },
-            y: function(p) {
-              return p.endPos.y
-            },
-            radius: 0.1,
-            duration: anime.random(1200, 1800),
-            easing: 'easeOutExpo',
-            update: this.renderParticle
-          },
-          0
-        )
-        .add(
-          {
-            targets: circle,
-            radius: anime.random(80, 160),
-            lineWidth: 0,
-            alpha: {
-              value: 0,
-              easing: 'linear',
-              duration: anime.random(600, 800)
-            },
-            duration: anime.random(1200, 1800),
-            easing: 'easeOutExpo',
-            update: this.renderParticle,
-            offset: 0
-          },
-          0
-        )
-    },
-
-    createCircle(x, y, ctx) {
-      var p = {}
-      p.x = x
-      p.y = y
-      p.color = '#FFF'
-      p.radius = 0.1
-      p.alpha = 0.5
-      p.lineWidth = 6
-      p.draw = function() {
-        ctx.globalAlpha = p.alpha
-        ctx.beginPath()
-        ctx.arc(p.x, p.y, p.radius, 0, 2 * Math.PI, true)
-        ctx.lineWidth = p.lineWidth
-        ctx.strokeStyle = p.color
-        ctx.stroke()
-        ctx.globalAlpha = 1
-      }
-      return p
-    },
-
-    createParticle(x, y, ctx) {
-      const colors = ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C']
-
-      var p = {}
-      p.x = x
-      p.y = y
-      p.color = colors[anime.random(0, colors.length - 1)]
-      p.radius = anime.random(16, 32)
-      p.endPos = this.setParticleDirection(p)
-      p.draw = function() {
-        ctx.beginPath()
-        ctx.arc(p.x, p.y, p.radius, 0, 2 * Math.PI, true)
-        ctx.fillStyle = p.color
-        ctx.fill()
-      }
-      return p
-    },
-
-    setParticleDirection(p) {
-      var angle = (anime.random(0, 360) * Math.PI) / 180
-      var value = anime.random(50, 180)
-      var radius = [-1, 1][anime.random(0, 1)] * value
-      return {
-        x: p.x + radius * Math.cos(angle),
-        y: p.y + radius * Math.sin(angle)
-      }
-    },
-
-    renderParticle(anim) {
-      for (var i = 0; i < anim.animatables.length; i++) {
-        anim.animatables[i].target.draw()
-      }
     }
   }
 }
 </script>
-
-<style lang="sass">
-#tensormonkey-fireworks
-  position: absolute
-  width: 800px
-  height: 800px
-  top: -300px
-  left: -300px
-  z-index: 1
-
-#aframe-scene-wrap
-  position: absolute
-  width: 800px
-  height: 800px
-  top: -300px
-  left: -300px
-  z-index: 0
-  overflow: hidden
-  border-radius: 100%
-  opacity: 1
-  transition: opacity 0.5s ease
-
-  &.invisible
-    opacity: 0
-
-  &:after
-    content: ""
-    display: block
-    width: 100%
-    height: 100%
-    background: radial-gradient(ellipse at center, rgba(30,30,63,0) 0%,rgba(30,30,63,1) 70%,rgba(30,30,63,1) 100%)
-    border-radius: 50%
-    position: absolute
-    top: 0
-    left: 0
-
-#aframe-scene
-  width: 100%
-  height: 100%
-</style>
