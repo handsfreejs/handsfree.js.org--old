@@ -3,11 +3,7 @@
     v-layout(text-center wrap)
       v-row
         v-col(cols=12 md=6).mb-4
-          div(style='width: 190px; height: 190px; margin: auto; position: relative').text-left
-            div#aframe-scene-wrap(:class='{invisible: !isAframeReady}')
-              AframeHero(v-on:aframeReady='onAframeReady')
-            canvas#tensormonkey-fireworks(ref='canvas' width=500 height=500)
-            TensorMonkey.ozramos-tensormonkey-animated-slowly(height='150px' perspective='400px')
+          AframeHero(v-on:aframeReady='onAframeReady')
 
           div(style="position: relative; z-index: 3")
             h1.display-2.font-weight-bold.mb-5(@click='startFireworks' :class="{invisible: isAframeReady}") Handsfree.js
@@ -143,13 +139,12 @@
 </template>
 
 <script>
-import TensorMonkey from '@/components/TensorMonkey'
 import AframeHero from '@/components/AframeHero'
 import { mapState } from 'vuex'
 import anime from 'animejs/lib/anime.es.js'
 
 export default {
-  components: { TensorMonkey, AframeHero },
+  components: { AframeHero },
 
   computed: mapState(['isTracking']),
 
