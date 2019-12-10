@@ -86,7 +86,6 @@ export default {
      * Scrolls the floor away from user
      */
     animateFloor(shouldReloop) {
-      console.log('ANIMATE')
       this.$refs.floor.object3D.position.z -= this.floorSpeed
       if (this.$refs.floor.object3D.position.z < -100)
         this.$refs.floor.object3D.position.z = 0
