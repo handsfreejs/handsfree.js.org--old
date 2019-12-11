@@ -34,13 +34,7 @@
     </g>
 
     <!-- New Mouth -->
-    <ellipse
-      class="ozramos-tensormonkey-skin"
-      cx="225"
-      cy="250"
-      rx="85"
-      ry="35"
-    />
+    <ellipse class="ozramos-tensormonkey-skin" cx="225" cy="250" rx="85" ry="35" />
     <circle class="ozramos-tensormonkey-skin" cx="255" cy="280" r="30" />
     <circle class="ozramos-tensormonkey-fur" cx="255" cy="280" r="15" />
   </svg>
@@ -110,6 +104,10 @@
 
 .ozramos-tensormonkey-mini .ozramos-tensormonkey-animated {
   animation-name: float-mini;
+}
+.ozramos-tensormonkey-animated-slowly {
+  position: relative;
+  animation: float-mini 9s ease-in-out infinite -2.4s;
 }
 
 .ozramos-tensormonkey-animated:nth-child(1) .ozramos-tensormonkey-skin,

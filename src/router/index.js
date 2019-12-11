@@ -55,10 +55,10 @@ const routes = [
       import(/* webpackChunkName: "Desktop" */ '../views/Desktop.vue')
   },
   {
-    path: '/trippycuts',
-    name: 'Trippycuts',
+    path: '/chrome',
+    name: 'Chrome',
     component: () =>
-      import(/* webpackChunkName: "Trippycuts" */ '../views/Trippycuts.vue')
+      import(/* webpackChunkName: "Chrome" */ '../views/Chrome.vue')
   }
 ]
 

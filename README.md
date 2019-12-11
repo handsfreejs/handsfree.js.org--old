@@ -73,6 +73,11 @@ This repo is available for free and commercial use under [Apache 2.0](http://www
 
 - [Monkey logo adaption](https://www.designevo.com/apps/logo/?name=cute-monkey-and-interesting-gaming)
 
+## Misc
+
+- [Start webcam "color fireworks" effect](https://codepen.io/juliangarnier/pen/gmOwJX)
+- ["Hero unit" backdrop adapted from Aframe's "Hello Metaverse"](https://aframe.io/examples/showcase/hello-metaverse/)
+
 <br>
 <br>
 <br>
