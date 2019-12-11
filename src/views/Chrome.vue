@@ -15,11 +15,13 @@ v-container
           v-card-title The Handsfree Chrome Extension 
           v-card-text.body-1
             p Browse the web, watch videos, play games, do work, use social media, and more handsfree 👋
-            p Those are the goals anyways, the Chrome Extension is in the works! <strong>Sign up below to get notified of its release</strong>, <a href="https://github.com/handsfreejs/handsfree-chrome">star it on GitHub</a>, and <a href="https://twitter.com/heyozramos">follow me on Twitter @heyozramos</a>
-          v-card-actions
-            v-text-field(filled label='Enter your email')
-              template(v-slot:append-outer)
-                v-btn.primary Let me know!
+            p Those are the goals anyways, the extension is in the works! <strong>Sign up below to get notified of when the extension is ready.</strong>
+
+            form.mt-5(action='https://handsfree.us4.list-manage.com/subscribe/post?u=68fc2805161cded43e4f479fb&amp;id=d3a6b8610f' method='post')
+              v-text-field(filled type='email' name='EMAIL' label='Enter your email')
+                template(v-slot:append-outer)
+                  v-btn.primary(type='submit' name='subscribe' value='Subscribe') Notify me!
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_68fc2805161cded43e4f479fb_d3a6b8610f" tabindex="-1" value=""></div>
 
     //- v-row.my-spread
     //-   v-col.col-12
