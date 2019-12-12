@@ -31,8 +31,8 @@
         a-entity(ref='camera' position='0 1.5 0')
           a-entity(camera)
 
-    canvas#tensormonkey-fireworks(ref='canvas' width=500 height=500)
-    TensorMonkey.ozramos-tensormonkey-animated-slowly(@click='startFireworks' height='150px' perspective='400px')
+    canvas#tensormonkey-fireworks(@click='startFireworks(true)' ref='canvas' width=500 height=500)
+    TensorMonkey.ozramos-tensormonkey-animated-slowly(height='150px' perspective='400px')
 </template>
 
 <script>
@@ -141,10 +141,13 @@ export default {
     /**
      * Shoots fireworks
      */
-    startFireworks() {
+    startFireworks(isRandom) {
+      let x = isRandom ? 250 + Math.floor(Math.random() * 200) - 100 : 250
+      let y = isRandom ? 250 + Math.floor(Math.random() * 200) - 100 : 250
+
       const ctx = this.$refs.canvas.getContext('2d')
 
-      this.animateFireworks(250, 250, ctx)
+      this.animateFireworks(x, y, ctx)
       anime({ duration: 250 }).finished.then()
     },
 
