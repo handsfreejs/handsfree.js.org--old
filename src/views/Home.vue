@@ -27,7 +27,14 @@
                 img(src="https://jeeliz.com/wp-content/uploads/2018/01/LOGO_JEELIZ_BLUE.png" height=30)
 
         v-col.mb-4(cols=12 md=6 style="position: relative; z-index: 3")
-          iframe(style='margin-top: 100px; max-width: 100%' width="560" height="315" src="https://www.youtube.com/embed/ty081LCcYpc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+          v-card
+            v-card.text-left
+              v-card-title A wrapper library
+              v-card-text
+                p <b>Our goal</b> is to build a framework around for the following models for the purpose of interacting with pages handsfree: <a href="https://github.com/jeeliz/jeelizFaceFilter">Jeeliz FaceFilter</a> (head tracking), <a href="https://github.com/tensorflow/tfjs-models/tree/master/body-pix">BodyPix</a> and <a href="https://github.com/tensorflow/tfjs-models/tree/master/posenet">PoseNet</a> (segmentation and pose estimation), <a href="https://github.com/victordibia/handtrack.js/">Handtrack.js</a> (hand tracking), <a href="https://github.com/brownhci/WebGazer">WebGazer</a> (eye tracking), and more!
+                p <b>Our mission</b> is to help you quickly create handsfree experiences and assistive tech
+                p <b>Our vision</b> is a handsfree world 👋
+          iframe(style='margin-top: 40px; max-width: 100%' width="560" height="315" src="https://www.youtube.com/embed/ty081LCcYpc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
 
     v-layout(wrap)
       v-row.my-spread

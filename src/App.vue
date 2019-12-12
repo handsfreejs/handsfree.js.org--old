@@ -41,8 +41,9 @@
         v-list
           v-list-item.primary(:to='{name: "Chrome"}')
             v-list-item-action
-              v-icon mdi-google
-            v-list-item-content Chrome Extension
+              v-icon(style='color: #1e1e3f') mdi-google-chrome
+            v-list-item-content(style='color: #1e1e3f')
+              strong Chrome Extension
 
         v-list
         div(:class='{hidden: !isFeedVisible}')
