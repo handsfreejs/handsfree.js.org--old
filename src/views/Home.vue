@@ -23,8 +23,11 @@
             p
               small Powered by:
             p
-              a(href="https://github.com/jeeliz/jeelizWeboji")
+              a.mr-5(href="https://github.com/jeeliz/jeelizWeboji")
                 img(src="https://jeeliz.com/wp-content/uploads/2018/01/LOGO_JEELIZ_BLUE.png" height=30)
+
+              a(href="https://github.com/tensorflow/tfjs-models/")
+                img(src='https://i.imgur.com/KqlnNuA.png' height=30)
 
         v-col.mb-4(cols=12 md=6 style="position: relative; z-index: 3")
           v-card

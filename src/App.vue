@@ -44,6 +44,10 @@
               v-icon(style='color: #1e1e3f') mdi-google-chrome
             v-list-item-content(style='color: #1e1e3f')
               strong Chrome Extension
+          v-list-item.mt-5(:to='{name: "Settings"}')
+            v-list-item-action
+              v-icon mdi-settings-outline
+            v-list-item-content Settings
 
         v-list
         div(:class='{hidden: !isFeedVisible}')

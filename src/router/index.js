@@ -54,11 +54,18 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "Desktop" */ '../views/Desktop.vue')
   },
+
   {
     path: '/chrome',
     name: 'Chrome',
     component: () =>
       import(/* webpackChunkName: "Chrome" */ '../views/Chrome.vue')
+  },
+  {
+    path: '/settings',
+    name: 'Settings',
+    component: () =>
+      import(/* webpackChunkName: "Settings" */ '../views/Settings.vue')
   }
 ]
 
