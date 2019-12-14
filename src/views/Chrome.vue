@@ -11,8 +11,8 @@ v-container
           h1.display-2.font-weight-bold.mb-5(:class="{invisible: isAframeReady}") Handsfree Chrome
           p
             <a href="https://github.com/handsfreejs/handsfree-chrome" class="mr-3"><img class="mr-1" src="https://img.shields.io/github/last-commit/handsfreejs/handsfree-chrome.svg"></a>
-            <a href="https://github.com/handsfreejs/handsfree-chrome" class="mr-3"><img class="mr-1" src="https://img.shields.io/github/issues/handsfreejs/handsfree-chrome/bugs?label=bugs"></a>
-            <a href="https://github.com/handsfreejs/handsfree-chrome"><img class="mr-1" src="https://img.shields.io/github/issues/handsfreejs/handsfree-chrome/request?label=requests"></a>
+            <a href="https://github.com/handsfreejs/handsfree-chrome/issues?q=is%3Aissue+is%3Aopen+label%3Abug" class="mr-3"><img class="mr-1" src="https://img.shields.io/github/issues/handsfreejs/handsfree-chrome/bug?label=bugs"></a>
+            <a href="https://github.com/handsfreejs/handsfree-chrome/issues?q=is%3Aissue+is%3Aopen+label%3Arequest"><img class="mr-1" src="https://img.shields.io/github/issues/handsfreejs/handsfree-chrome/request?label=requests"></a>
 
           p
             small With support from the <a href="https://www.cmu.edu/cfa/studio/index.html">STUDIO for Creative Inquiry</a>, <a href="https://glitch.com/@handsfreejs">Glitch.com</a>, the <a href="https://youtu.be/CJDpF4xUieY?t=58">School of AI</a>, and you!
