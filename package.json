@@ -22,7 +22,7 @@
     "gsap": "^2.1.3",
     "handsfree": "^6.1.1",
     "highlight.js": "^9.16.2",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "roboto-fontface": "*",
     "simple-keyboard": "^2.27.24",
     "vue": "^2.6.10",
